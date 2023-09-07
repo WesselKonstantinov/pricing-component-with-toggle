@@ -95,4 +95,44 @@ body {
   font-family: var(--font-family-primary);
   font-size: 0.9375rem;
   font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* || Main section styles */
+.main {
+  padding: 4rem 1.5rem;
+}
+
+.main__inner {
+  max-width: 65.625rem;
+  margin-inline: auto;
+}
+
+.main__inner > * + * {
+  margin-top: var(--flow-space, 2.5rem);
+}
+
+.main__heading {
+  color: var(--color-grayish-blue-300);
+  font-size: 2rem;
+  font-weight: inherit;
+}
+
+.main__card-stack {
+  --flow-space: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.03125rem;
 }
