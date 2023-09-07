@@ -84,3 +84,15 @@ select {
   --font-family-primary: "Montserrat", sans-serif;
   --font-weight-bold: 700;
 }
+
+/* || Global styles */
+body {
+  background-color: var(--color-grayish-blue-100);
+  background-image: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-size: 29.5rem 47.5rem;
+  background-position: top -2.5rem left 9.6875rem;
+  font-family: var(--font-family-primary);
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-bold);
+}
