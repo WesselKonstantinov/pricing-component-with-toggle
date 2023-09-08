@@ -85,6 +85,7 @@ select {
   --color-wisteria: hsl(236 72% 79%);
   --color-purple: hsl(237 63% 64%);
   --color-grayish-blue-100: hsl(240 78% 98%);
+  --color-grayish-blue-150: hsl(236 12% 74%);
   --color-grayish-blue-200: hsl(234 14% 74%);
   --color-grayish-blue-300: hsl(233 13% 49%);
   --color-grayish-blue-400: hsl(232 13% 33%);
@@ -98,7 +99,7 @@ body {
   background-image: url("./images/bg-top.svg");
   background-repeat: no-repeat;
   background-size: 29.5rem 47.5rem;
-  background-position: top -2.5rem left 9.6875rem;
+  background-position: top -2.5rem left 8.6875rem;
   color: var(--color-grayish-blue-300);
   font-family: var(--font-family-primary);
   font-size: 0.9375rem;
@@ -146,6 +147,77 @@ body {
   gap: 2.03125rem;
 }
 
+/* || Toggle switch styles */
+.toggle {
+  padding: 0;
+  margin-inline: 0;
+  margin-bottom: 0;
+  border: none;
+  white-space: nowrap;
+}
+
+.toggle__label {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  color: var(--color-grayish-blue-150);
+  line-height: 2.133;
+}
+
+.toggle__label--annually {
+  padding-right: 5rem;
+}
+
+.toggle__label--monthly {
+  margin-left: -3.8rem;
+  padding-left: 5rem;
+}
+
+.toggle__label--annually::before,
+.toggle__label--annually::after {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.toggle__label--annually::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  z-index: 2;
+  background: #fff;
+  border-radius: 100%;
+  transform: translateX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.toggle__label--annually::after {
+  margin-inline: 1.5rem;
+  height: 2rem;
+  width: 3.5rem;
+  background: var(--color-gradient);
+  border-radius: 1rem;
+  opacity: 1;
+}
+
+.toggle__radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle__radio--annually:checked ~ .toggle__label--annually::before {
+  transform: translateX(-1.5rem);
+}
+
+.toggle__radio--monthly:checked ~ .toggle__label--monthly {
+  z-index: 1;
+}
+
+/* || Price card styles */
 .card {
   padding: 1.9375rem 1.8125rem;
   background-color: var(--color-white);
