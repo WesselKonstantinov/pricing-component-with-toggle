@@ -25,27 +25,28 @@
         <h1 class="main__heading">Our Pricing</h1>
         <fieldset class="toggle">
           <legend class="sr-only">Payment Plan</legend>
-          <div class="toggle__inner">
-            <label for="annually" class="toggle__label">Annually</label>
-            <span class="toggle__wrapper">
-              <input
-                type="radio"
-                name="payment-plan"
-                id="annually"
-                data-js="toggle-input"
-                class="toggle__radio"
-              />
-              <input
-                type="radio"
-                name="payment-plan"
-                id="monthly"
-                data-js="toggle-input"
-                class="toggle__radio"
-                checked
-              />
-            </span>
-            <label for="monthly" class="toggle__label">Monthly</label>
-          </div>
+          <input
+            type="radio"
+            name="payment-plan"
+            id="annually"
+            data-js="toggle-input"
+            class="toggle__radio toggle__radio--annually"
+          />
+          <label for="annually" class="toggle__label toggle__label--annually"
+            >Annually</label
+          >
+
+          <input
+            type="radio"
+            name="payment-plan"
+            id="monthly"
+            data-js="toggle-input"
+            class="toggle__radio toggle__radio--monthly"
+            checked
+          />
+          <label for="monthly" class="toggle__label toggle__label--monthly"
+            >Monthly</label
+          >
         </fieldset>
         <div class="main__card-stack">
           <div class="card">
