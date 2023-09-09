@@ -142,6 +142,8 @@ body {
 
 .main__card-stack {
   --flow-space: 5rem;
+  max-width: 28.75rem;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 2.03125rem;
@@ -324,6 +326,7 @@ body {
 
   .main__card-stack {
     --flow-space: 4.03125rem;
+    max-width: initial;
     flex-direction: row;
     justify-content: center;
     gap: 0;
