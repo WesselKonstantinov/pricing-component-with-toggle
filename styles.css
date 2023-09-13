@@ -220,6 +220,11 @@ body {
   z-index: 1;
 }
 
+.toggle:focus-within .toggle__label--annually::after {
+  box-shadow: 0 0 0 0.125rem var(--color-white),
+    0 0 0 0.25rem var(--color-grayish-blue-400);
+}
+
 /* || Price card styles */
 .card {
   padding: 1.9375rem 1.8125rem;
@@ -290,6 +295,7 @@ body {
 }
 
 .card__cta {
+  --outline-color: var(--color-grayish-blue-400);
   padding: 0.875rem;
   display: block;
   background: var(--color-gradient);
@@ -304,6 +310,7 @@ body {
 }
 
 .card__cta--inverted {
+  --outline-color: var(--color-white);
   background: var(--color-white);
   color: var(--color-purple);
 }
@@ -317,6 +324,11 @@ body {
 .card__cta--inverted:hover {
   border-color: var(--color-white);
   color: var(--color-white);
+}
+
+.card__cta:focus-visible {
+  outline: 0.2rem solid var(--outline-color);
+  outline-offset: 0.2rem;
 }
 
 @media (min-width: 60rem) {
