@@ -98,8 +98,8 @@ body {
   background-color: var(--color-grayish-blue-100);
   background-image: url("./images/bg-top.svg");
   background-repeat: no-repeat;
-  background-size: 29.5rem 47.5rem;
-  background-position: top -2.5rem left 8.6875rem;
+  background-size: 19.5rem 41.5rem;
+  background-position: top -2.5rem right -10rem;
   color: var(--color-grayish-blue-300);
   font-family: var(--font-family-primary);
   font-size: 0.9375rem;
@@ -320,6 +320,12 @@ body {
 }
 
 @media (min-width: 60rem) {
+  body {
+    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+    background-size: 23.5rem 41.5rem, 22.5rem 19rem;
+    background-position: top 0 right 0, bottom -2rem left 0;
+  }
+
   .main {
     padding-block: 4.4375rem;
   }
