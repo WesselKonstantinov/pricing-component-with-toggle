@@ -262,7 +262,7 @@ body {
 }
 
 .card__price {
-  font-size: 4.5rem;
+  font-size: clamp(3.75rem, 1.62vw + 3.385rem, 4.5rem);
   line-height: 0.99;
   letter-spacing: -0.03em;
 }
